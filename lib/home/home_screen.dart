@@ -72,6 +72,27 @@ class HomeScreenState extends State<HomeScreen> {
                           bottomRight: Radius.circular(30)
                         )
                       ),
+                    ),
+                    AppBar(
+                      backgroundColor: Colors.transparent,
+                      elevation: 0.0,
+                      centerTitle: true,
+                      title: new Text("Stack Overflow"),
+                      actions: <Widget>[
+                        new Icon(Icons.search, size: 30.0,),
+                        new SizedBox(width: 8.0,)
+                      ],
+                    ),
+                    Positioned(
+                      top: MediaQuery.of(context).size.height * 0.15,
+                      left: 20,
+                      right: MediaQuery.of(context).size.width * 0.3,
+                      child: new Text("Hi, Welome to Stack Overflow Questions App",
+                      style: new TextStyle(
+                        color: Colors.white70,
+                        fontSize: 22.0
+                      ),
+                      ),
                     )
                   ],
                 ),
@@ -79,7 +100,9 @@ class HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child: new Text("All Questions",
                   style: new TextStyle(
-                    color: Colors.black
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 23.0
                   ),
                   ),
                 ),
