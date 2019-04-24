@@ -51,10 +51,27 @@ class HomeScreenState extends State<HomeScreen> {
               child: new Text(currentState.errorMessage ?? 'Error' ),
             ));
           }
-          return new Container(
-              child: new Center(
-            child: new Text("hello flutter"),
-          ));
+          return new Material(
+            child: new Column(
+              children: <Widget>[
+                new Stack(
+                  children: <Widget>[
+                    new Container(
+                      height: MediaQuery.of(context).size.height * 0.3,
+                    )
+                  ],
+                ),
+                new Text("All Questions",
+                style: new TextStyle(
+                  color: Colors.black
+                  ),
+                  ),
+                new Expanded(
+                  child: new Container(),
+                )
+              ],
+            ),
+          ) ;
         });
   }
 }

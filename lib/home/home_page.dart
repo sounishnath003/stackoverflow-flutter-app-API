@@ -7,11 +7,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var _homeBloc = new HomeBloc();
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Home"),
-      ),
-      body: new HomeScreen(homeBloc: _homeBloc),
-    );
+    return new HomeScreen(homeBloc: _homeBloc) ;
   }
 }
