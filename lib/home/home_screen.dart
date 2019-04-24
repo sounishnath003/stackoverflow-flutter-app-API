@@ -57,7 +57,7 @@ class HomeScreenState extends State<HomeScreen> {
                 new Stack(
                   children: <Widget>[
                     new Container(
-                      height: MediaQuery.of(context).size.height * 0.3,
+                      height: MediaQuery.of(context).size.height * 0.33,
                       width:  MediaQuery.of(context).size.width,
                       decoration: new BoxDecoration(
                         gradient: LinearGradient(
@@ -84,7 +84,7 @@ class HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                     Positioned(
-                      top: MediaQuery.of(context).size.height * 0.15,
+                      top: MediaQuery.of(context).size.height * 0.17,
                       left: 20,
                       right: MediaQuery.of(context).size.width * 0.3,
                       child: new Text("Hi, Welome to Stack Overflow Questions App",
@@ -97,17 +97,62 @@ class HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: new Text("All Questions",
                   style: new TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
-                    fontSize: 23.0
+                    fontSize: 24.0
                   ),
                   ),
                 ),
+                new SizedBox(
+                  height: 10.0,
+                ),
                 new Expanded(
-                  child: new Container(),
+                  child: new ListView.builder(
+                    itemCount:  15,
+                    itemBuilder: (_, index) {
+                      return new ListTile(
+                        leading: new CircleAvatar(
+                          radius: 25.0,
+                          backgroundColor: Colors.black,
+                          child: new Text("P"),
+                          foregroundColor: Colors.white,
+                        ),
+                        title: new Text("Why Rails is awesome ?",
+                        style: new TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ),
+                        subtitle: new Row(
+                          children: <Widget>[
+                            new Chip(
+                              backgroundColor: Color(0xff611cdf),
+                              label: new Text("Ruby On Rails",
+                              style: new TextStyle(
+                                //fontWeight: FontWeight.bold,
+                                color: Colors.white
+                              ),
+                              ),
+                            )
+                          ],
+                        ),
+                        trailing: new Chip(
+                              backgroundColor: Colors.yellow,
+                              shape: BeveledRectangleBorder(
+                                borderRadius: new BorderRadius.circular(10),
+                              ),
+                              label: new Text("30 Views",
+                              style: new TextStyle(
+                                fontWeight: FontWeight.w700,
+                                color: Colors.black
+                              ),
+                              ),
+                            ),
+                      ) ;
+                    },
+                  ),
                 )
               ],
             ),
