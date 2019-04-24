@@ -58,14 +58,31 @@ class HomeScreenState extends State<HomeScreen> {
                   children: <Widget>[
                     new Container(
                       height: MediaQuery.of(context).size.height * 0.3,
+                      width:  MediaQuery.of(context).size.width,
+                      decoration: new BoxDecoration(
+                        gradient: LinearGradient(
+                          colors:  [
+                            Color(0xffd399c1),
+                            Color(0xff9b5acf),
+                            Color(0xff611cdf)
+                          ]
+                        ),
+                        borderRadius: new BorderRadius.only(
+                          bottomLeft: Radius.circular(30),
+                          bottomRight: Radius.circular(30)
+                        )
+                      ),
                     )
                   ],
                 ),
-                new Text("All Questions",
-                style: new TextStyle(
-                  color: Colors.black
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: new Text("All Questions",
+                  style: new TextStyle(
+                    color: Colors.black
                   ),
                   ),
+                ),
                 new Expanded(
                   child: new Container(),
                 )
